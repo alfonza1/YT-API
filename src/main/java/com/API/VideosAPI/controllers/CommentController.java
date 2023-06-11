@@ -23,7 +23,7 @@ public class CommentController {
     public ResponseEntity<Comment> getCommentById(@PathVariable Long commentId) {
         Comment comment = commentService.getCommentById(commentId);
         return ResponseEntity.ok(comment);
-}
+    }
 
     @GetMapping("videos/comments/{videoId}")
     public ResponseEntity<List<Comment>> getAllCommentsByVideoId(@PathVariable Long videoId) {
@@ -73,7 +73,6 @@ public class CommentController {
         Comment comment = commentService.addDislikeById(commentId);
         return ResponseEntity.ok(comment);
     }
-
 
 
 
